@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'detail/:id',
     component: DetailComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'characters'
   }
 ];
 
