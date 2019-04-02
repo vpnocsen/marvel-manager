@@ -1,3 +1,25 @@
+# Question 1:
+	String.prototype.removedVowels = function(){ return this.replace(/[ueoaiUEOAI]/g, '');}
+	// Test:
+	"This website is for losers LOL!".removedVowels();
+# Question 2:
+	## The current code is using callback and it is easy to fall to "Callback Hell". To optimize this code, we can use Async/await
+	
+	module.exports = {
+		getAccountId: async (apiKey, cb) => {
+			try{
+				const connection = await sql.connect(connectionString);
+				result1 = await connection.query(query1);
+				console.log(result1);
+				result2 = await connection.query(query2, {...result1});
+				console.log(result2);
+				result3 = await connection.query(query3, {...result2});
+				console.log(result3);
+			catch(ex){
+				console.error(ex);
+			}
+		}
+	}
 # MarvelManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
