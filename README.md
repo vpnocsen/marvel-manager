@@ -3,7 +3,9 @@
 	// Test:
 	"This website is for losers LOL!".removedVowels();
 # Question 2:
-	## The current code is using callback and it is easy to fall to "Callback Hell". To optimize this code, we can use Async/await
+
+	The current code is using callback and it is easy to fall to "Callback Hell". 
+	To optimize this code, we can use Async/await
 	
 	module.exports = {
 		getAccountId: async (apiKey, cb) => {
@@ -21,6 +23,8 @@
 		}
 	}
 # MarvelManager
+
+Demo: https://marvel-manager-40bc5.firebaseapp.com/characters
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
