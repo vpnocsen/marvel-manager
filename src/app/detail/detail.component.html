@@ -1,0 +1,35 @@
+<mat-progress-bar color="primary" mode="indeterminate" *ngIf="isLoading">
+</mat-progress-bar>
+<div class="detail-container">
+  <div class="main">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{sumary?.name}}</mat-card-title>
+        <mat-card-subtitle>{{sumary?.modified | date : 'DD.MM.YYYY HH:mm'}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="thumbnail">
+      <mat-card-content>
+        {{sumary?.description}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="comics">
+    <ng-container *ngFor="let c of comics">
+      <mat-card>
+        <mat-card-header>
+          <div>
+            <img [src]="c.thumbnail" width="100">
+          </div>
+          <mat-card-title>{{c?.title}}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div [innerHTML]="c?.desc"></div>
+          <div [innerHTML]="c.content"></div>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>

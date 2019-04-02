@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+}
+
+.data-table {
+    overflow: auto;
+    max-height: calc(100vh - 112px);
+    position: relative;
+
+    mat-progress-bar {
+        z-index: 99999;
+        height: 5px;
+        position: sticky;
+        top: 0;
+    }
+}
+
+.mat-column-name {
+    width: 200px;
+}
+
+.mat-column-image {
+    width: 100px;
+
+    img {
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
